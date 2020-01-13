@@ -1,0 +1,106 @@
+
+
+/*********************Landing Page*/
+body,
+html {
+
+    height: 100%;
+}
+
+
+
+.name {
+    font-size: 60px;
+    color: black;
+}
+
+.p1 {
+    font-size: 35px;
+    color: black;
+    margin-left: 4%;
+}
+
+.name-container {
+    min-height: 100vh;
+    min-width: 100vw;
+
+}
+
+/*********************************Nav*/
+
+.nav-link {
+    text-align: right;
+
+
+}
+
+.navbar-light .navbar-toggler {
+    background-color: grey;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+
+}
+
+.navbar-light .navbar-toggler:hover {
+    background-color: grey;
+}
+
+
+
+/********************************/
+
+.name-border {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    right: 20%;
+
+    width: 60%;
+    ;
+    
+
+}
+
+
+
+span.border {
+    border: none;
+}
+
+/*******************************************************/
+
+/**********************************Game Page*/
+.game-container {
+    padding-top: 25%;
+    padding-left: 15%;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.game-card{
+    
+
+}
+
+
+
+
+/*****************************************************************************/
+
+/***********************************Contact Page*/
+
+.form-section {
+    background-color: ;
+    text-align: center;
+    min-height: 50vh;
+}
+
+
+
+
+
+
+
+
+/******************************************************************************/
