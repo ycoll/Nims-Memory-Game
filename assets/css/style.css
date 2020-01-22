@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 
 /*********************Landing Page*/
 body,
@@ -22,8 +22,8 @@ html {
 
 .name-container {
     min-height: 100vh;
-    min-width: 100vw;
-
+    min-width: 100vw; 
+    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
 }
 
 /*********************************Nav*/
@@ -35,14 +35,14 @@ html {
 }
 
 .navbar-light .navbar-toggler {
-    background-color: grey;
+    background-color: #5d7db7;
     transition: 0.5s;
     transition-timing-function: ease-in-out;
 
 }
 
 .navbar-light .navbar-toggler:hover {
-    background-color: grey;
+    background-color: #5d7db7;
 }
 
 
@@ -57,12 +57,15 @@ html {
     right: 20%;
 
     width: 60%;
+    
     ;
     
 
 }
 
-
+.name{
+    font-family: 'Orbitron', sans-serif;
+}
 
 span.border {
     border: none;
@@ -71,34 +74,62 @@ span.border {
 /*******************************************************/
 
 /**********************************Game Page*/
-.game-container {
-    padding-top: 25%;
+.game-section {
+    padding-right: 15%;
     padding-left: 15%;
-    min-height: 100vh;
+    padding-bottom: 20%;
+    min-height: 40vh;
     min-width: 100vw;
+   
+    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
 }
 
 .game-card{
+    padding: 5%;
     
 
 }
 
+.game-container {
+    padding-top: 20%;
+}
 
-
+.fa.game-card{
+    font-size: 30px;
+    margin: 2px;
+    text-align: center;
+    background-color: #5d7db7;
+    border-radius: 25px;
+}
 
 /*****************************************************************************/
 
 /***********************************Contact Page*/
 
 .form-section {
-    background-color: ;
+    
     text-align: center;
-    min-height: 50vh;
+    min-height: 60vh;
+    padding-top: 25%;
+    padding-right: 25%;
+    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
+}
+.col.form-section{
+    padding-left: 25%;
+}
+.contact-heading{
+ font-family: 'Orbitron', sans-serif;
+ padding-right: 30%;
+    
+
 }
 
-
-
-
+form {
+    padding: 5%;
+    width: 50vw;
+    
+   
+}
 
 
 
