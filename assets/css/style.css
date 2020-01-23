@@ -74,6 +74,7 @@ span.border {
 /*******************************************************/
 
 /**********************************Game Page*/
+
 .game-section {
     padding-right: 15%;
     padding-left: 15%;
@@ -84,6 +85,23 @@ span.border {
     background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
 }
 
+.game-heading{
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 10%;
+
+}
+
+.game-rules{
+    font-size: 25px;
+
+}
+
+.score-row{
+    padding-bottom: 15px;
+}
+.restart.fa-repeat{
+    font-size: 30px;
+}
 .game-card{
     padding: 5%;
     
@@ -95,7 +113,7 @@ span.border {
 }
 
 .fa.game-card{
-    font-size: 30px;
+    font-size: 40px;
     margin: 2px;
     text-align: center;
     background-color: #5d7db7;
@@ -130,6 +148,8 @@ form {
     
    
 }
+
+
 
 
 
