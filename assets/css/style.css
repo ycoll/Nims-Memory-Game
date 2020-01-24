@@ -102,11 +102,6 @@ span.border {
 .restart.fa-repeat{
     font-size: 30px;
 }
-.game-card{
-    padding: 5%;
-    
-
-}
 
 .game-container {
     padding-top: 20%;
@@ -114,12 +109,34 @@ span.border {
 
 .fa.game-card{
     font-size: 40px;
-    margin: 2px;
+    color: black;
+    margin: 1%;
     text-align: center;
-    background-color: #5d7db7;
+    background-color: black;
     border-radius: 25px;
+    padding: 5%;
 }
 
+.fa.game-card.flip{
+    transform: rotateY(180deg);
+    background-color: #5f7db7;
+    font-size: 40px;
+    transition: transform 0.8s;
+}
+
+.fa.game-card.match{
+    font-size: 40px;
+    background-color: #018383;
+}
+
+.fa.game-card.unmatch{
+    font-size: 40px;
+    background-color: #c70d3a;
+}
+
+.fa.game-card.disabled{
+    pointer-events: none;
+}
 /*****************************************************************************/
 
 /***********************************Contact Page*/
