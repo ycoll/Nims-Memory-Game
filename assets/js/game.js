@@ -4,11 +4,15 @@ let card = document.getElementsByClassName("game-card");
 let cards = [ ... card];
 
 let flippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
 
 let showCard = function() {
+    if (lockBoard) return;
+    if (this === firstCard) return
+
     this.classList.add("flip");
-    this.classList.toggle("disabled")
+    
 
     if (!flippedCard){
         flippedCard = true;
@@ -17,7 +21,7 @@ let showCard = function() {
     }
    
     secondCard = this;
-    flippedCard = false;
+    
 
     checkForMatch();
 }
@@ -33,10 +37,13 @@ function disableCards(){
     secondCard.classList.add("match");
     firstCard.removeEventListener('click', showCard);
     secondCard.removeEventListener('click', showCard);
-
+ 
+    resetBoard();
 }
 
 function unflipCards () {
+     lockBoard = true
+
      firstCard.classList.add('unmatch')
      secondCard.classList.add('unmatch')
       
@@ -45,8 +52,25 @@ function unflipCards () {
      secondCard.classList.remove('unmatch')
      firstCard.classList.remove('flip');
      secondCard.classList.remove('flip');
+
+    
+    resetBoard();
    }, 1500);
 }
+
+function resetBoard(){
+    [flippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+   cards.forEach(card => {
+     let ramdomPos = Math.floor(Math.random() * 12);
+     card.style.order = ramdomPos;
+   });
+ })();
+
+
 cards.forEach(card => card.addEventListener('click', showCard));
 
 
