@@ -91,6 +91,10 @@ span.border {
 
 }
 
+#time{
+     font-family: 'Orbitron', sans-serif;
+     font-size: 25px;
+}
 .game-rules{
     font-size: 25px;
 
