@@ -3,10 +3,10 @@
 let card = document.getElementsByClassName("game-card");
 let cards = [ ... card];
 
-let sec = 0;
-let min = 0;
-let time = document.querySelector("#time")
-let interval; 
+
+let score = 0;
+let moves = document.querySelector("#Moves")
+
 let match = document.getElementsByClassName(".match")
 
 
@@ -15,7 +15,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 let isMatch;
     
-timer(time);
+
     
 let showCard = function() {
      
@@ -38,30 +38,11 @@ let showCard = function() {
     checkForMatch();
 }
 
+function scores() {
+    score++
+    moves.innerHTML= "Move(s):  "+score;
 
- function timer(time){
-    
-    console.log('Im workiing');
-    let interval= setInterval(function(){
-    sec++
-    time.innerHTML = "Time  "+min+" : "+sec;
-   
 
-    if(sec == 60){
-        min ++
-        sec = 0;
-    }
-    
-    if(min == 60){
-        min = 0;
-        sec = 0;
-    }
-    if(match.length == 16){
-        clearInterval(interval)
-
-    }
-    
-}, 1000);
 }
  
 
@@ -115,8 +96,8 @@ function resetBoard(){
  })();
 
 
-cards.forEach(card => card.addEventListener('click', showCard ));
-
+cards.forEach(card => card.addEventListener('click', showCard,));
+cards.forEach(card => card.addEventListener('click', scores,));
  
 
 
