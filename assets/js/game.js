@@ -1,7 +1,7 @@
 //Game based on tutorial https://marina-ferreira.github.io/tutorials/js/memory-game/
 
 let card = document.getElementsByClassName("game-card");
-let cards = [ ... card];
+let cards = [...card];
 
 
 let score = 0;
@@ -14,37 +14,60 @@ let flippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let isMatch;
-    
 
-    
-let showCard = function() {
-     
-    
+
+function reset() {
+
+    score = 0;
+    moves.innerHTML = "Move(s):  " + score;
+    for (var i = 0; i < cards.length; i++) {
+        cards[i].classList.remove("match", "unmatch", "flip")
+        cards.forEach(card => card.addEventListener('click', showCard));
+
+        (function shuffle() {
+            cards.forEach(card => {
+                let ramdomPos = Math.floor(Math.random() * 16);
+                card.style.order = ramdomPos;
+            });
+        })();
+
+    };
+
+
+
+
+
+}
+
+let showCard = function () {
+
+
     if (lockBoard) return;
     if (this === firstCard) return
 
     this.classList.add("flip");
-   
 
-    if (!flippedCard){
+
+    if (!flippedCard) {
         flippedCard = true;
-        firstCard= this;
+        firstCard = this;
         return;
     }
-  
+
     secondCard = this;
-    
-   
+
+
     checkForMatch();
 }
 
 function scores() {
+    if(lockBoard)return;
     score++
-    moves.innerHTML= "Move(s):  "+score;
-
+    moves.innerHTML = "Move(s):  " + score;
+    
 
 }
- 
+
 
 
 function checkForMatch() {
@@ -55,33 +78,33 @@ function checkForMatch() {
 
 
 
-function disableCards(){
+function disableCards() {
     firstCard.classList.add("match");
     secondCard.classList.add("match");
     firstCard.removeEventListener('click', showCard);
     secondCard.removeEventListener('click', showCard);
- 
+
     resetBoard();
 }
 
-function unflipCards () {
-     lockBoard = true
+function unflipCards() {
+    lockBoard = true
 
-     firstCard.classList.add('unmatch')
-     secondCard.classList.add('unmatch')
-      
+    firstCard.classList.add('unmatch')
+    secondCard.classList.add('unmatch')
+
     setTimeout(() => {
-     firstCard.classList.remove('unmatch')
-     secondCard.classList.remove('unmatch')
-     firstCard.classList.remove('flip');
-     secondCard.classList.remove('flip');
+        firstCard.classList.remove('unmatch')
+        secondCard.classList.remove('unmatch')
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
 
-    
-    resetBoard();
-   }, 1500);
+
+        resetBoard();
+    }, 1500);
 }
 
-function resetBoard(){
+function resetBoard() {
     [flippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
@@ -89,16 +112,16 @@ function resetBoard(){
 
 
 (function shuffle() {
-   cards.forEach(card => {
-     let ramdomPos = Math.floor(Math.random() * 16);
-     card.style.order = ramdomPos;
-   });
- })();
+    cards.forEach(card => {
+        let ramdomPos = Math.floor(Math.random() * 16);
+        card.style.order = ramdomPos;
+    });
+})();
 
 
-cards.forEach(card => card.addEventListener('click', showCard,));
-cards.forEach(card => card.addEventListener('click', scores,));
- 
+cards.forEach(card => card.addEventListener('click', showCard));
+cards.forEach(card => card.addEventListener('click', scores));
+
 
 
 
