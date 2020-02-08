@@ -20,8 +20,10 @@ function reset() {
 
     score = 0;
     moves.innerHTML = "Move(s):  " + score;
+   
     for (var i = 0; i < cards.length; i++) {
         cards[i].classList.remove("match", "unmatch", "flip")
+       
         cards.forEach(card => card.addEventListener('click', showCard));
 
         (function shuffle() {
