@@ -83,7 +83,7 @@ I have tested the site and game on various screen sizes and browsers and found i
 
 ## Deployment
 
-This project is hosted on GitHub pages here ()
+This project is hosted on GitHub pages here https://ycoll.github.io/Nims-Memory-Game/
 
 
 ## Credits

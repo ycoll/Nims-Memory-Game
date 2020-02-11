@@ -2,187 +2,172 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Nims Memory Game</title>
-	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
-	</script>
-	<script>
-		(function(){
-      emailjs.init("user_2XLNWuqeljGFG1tggK7In");
-      
-   })();
-	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nims Memory Game</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+    </script>
+    <script>
+        (function() {
+            emailjs.init("user_2XLNWuqeljGFG1tggK7In");
+
+        })();
+    </script>
 </head>
 
 <body>
-	<header class='container-fluid '>
+    <header class='container-fluid '>
 
+        <div class="row ">
+            <div class="col name-container">
+                <!--Bootstrap Navbar-learned on w3schools.com-->
+                <nav class="navbar navbar-custom  bg-transparent navbar-light ">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-		<div class="row ">
-			<div class="col name-container">
-				<!--Bootstrap Navbar-learned on w3schools.com-->
-				<nav class="navbar navbar-custom  bg-transparent navbar-light ">
-					<a class="navbar-brand" href="#"></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#game">Play Here!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contactme">Contact Me! </a>
+                            </li>
 
-					<div class="collapse navbar-collapse " id="collapsibleNavbar">
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#game">Play Here!</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#contactme">Contact Me! </a>
-							</li>
-
-
-						</ul>
-					</div>
-
-				</nav>
-
-				<!--///-->
-			</div>
-		</div>
-		<div class='name-border'>
-			<h1 class='name'> Nims</h1>
-			<p class='p1'>Memory Game</p>
-		</div>
-	</header>
-	<!--Game Page-->
-	<section class=' game-section' id='game'>
-		<h2 class='game-heading'>Let's Play!</h2>
-		<ol class='game-rules'>
-			<li>Click on a card to reveal the icon</li>
-			<li>Try to match with corresponding icon </li>
-			<li>Once all the cards are matched you win!</li>
-			<li>Replay to try and beat your score!</li>
-		</ol>
-
-		<div class='container-fluid game-container'>
-			<div class='row score-row'>
-				<div class='col' id='Moves'>
-					Move(s)
-
-				</div>
-				<div class='col restart fa fa-repeat' onclick=reset()>
-
-				</div>
-			</div>
-			<div class='row game-row '>
-				<div class="col game-card fa fa-moon-o" data-framework="moon">
-
-				</div>
-				<div class="col game-card fa fa-paw" data-framework="paw">
-
-				</div>
-				<div class="col game-card fa fa-globe" data-framework="globe">
-
-				</div>
-				<div class="col  game-card fa fa-tree" data-framework="tree">
-
-				</div>
-			</div>
-			<div class='row game-row'>
-				<div class="col game-card fa fa-star" data-framework="star">
-
-				</div>
-				<div class="col game-card fa fa-globe" data-framework="globe">
-
-				</div>
-				<div class="col game-card fa fa-moon-o" data-framework="moon">
-
-				</div>
-				<div class="col game-card fa fa-leaf" data-framework="leaf">
-
-				</div>
-			</div>
-			<div class='row game-row '>
-				<div class="col game-card fa fa-tree" data-framework="tree">
-
-				</div>
-				<div class="col game-card fa fa-leaf" data-framework="leaf">
-
-				</div>
-				<div class="col game-card fa fa-diamond" data-framework="diamond">
-
-				</div>
-				<div class="col game-card fa fa-bolt" data-framework="bolt">
-
-				</div>
-			</div>
-			<div class='row game-row'>
-				<div class="col game-card fa fa-paw" data-framework="paw">
-
-				</div>
-				<div class="col game-card fa fa-diamond" data-framework="diamond">
-
-				</div>
-				<div class="col game-card fa fa-bolt" data-framework="bolt">
-
-				</div>
-				<div class="col game-card fa fa-star" data-framework="star">
-
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--//-->
-
-	<!--Contact Page-->
-	<section class='container-fluid'>
-		<div class="row">
-			<div class="col form-section">
-
-				<h3 class='contact-heading' >Contact me!</h3>
-				<form id="myForm" onsubmit="return sendMail(this);">
-					<div class="form-group">
-
-						<input type="text" class="form-control text" id="usr" placeholder='Name' name='name' required>
+                        </ul>
                     </div>
-						<div class="form-group">
-							<input type="email" class="form-control text" id="email" placeholder="Email" name="email" required>
+
+                </nav>
+
+                <!--///-->
+            </div>
+        </div>
+        <div class='name-border'>
+            <h1 class='name'> Nims</h1>
+            <p class='p1'>Memory Game</p>
+        </div>
+    </header>
+    <!--Game Page-->
+    <section class=' game-section' id='game'>
+        <h2 class='game-heading'>Let's Play!</h2>
+        <ol class='game-rules'>
+            <li>Click on a card to reveal the icon</li>
+            <li>Try to match with corresponding icon </li>
+            <li>Once all the cards are matched you win!</li>
+            <li>Replay to try and beat your score!</li>
+        </ol>
+
+        <div class='container-fluid game-container'>
+            <div class='row score-row'>
+                <div class='col' id='Moves'>
+                    Move(s)
+
+                </div>
+                <div class='col restart fa fa-repeat' onclick=reset()>
+
+                </div>
+            </div>
+            <div class='row game-row '>
+                <div class="col game-card fa fa-moon-o" data-framework="moon">
+
+                </div>
+                <div class="col game-card fa fa-paw" data-framework="paw">
+
+                </div>
+                <div class="col game-card fa fa-globe" data-framework="globe">
+
+                </div>
+                <div class="col  game-card fa fa-tree" data-framework="tree">
+
+                </div>
+            </div>
+            <div class='row game-row'>
+                <div class="col game-card fa fa-star" data-framework="star">
+
+                </div>
+                <div class="col game-card fa fa-globe" data-framework="globe">
+
+                </div>
+                <div class="col game-card fa fa-moon-o" data-framework="moon">
+
+                </div>
+                <div class="col game-card fa fa-leaf" data-framework="leaf">
+
+                </div>
+            </div>
+            <div class='row game-row '>
+                <div class="col game-card fa fa-tree" data-framework="tree">
+
+                </div>
+                <div class="col game-card fa fa-leaf" data-framework="leaf">
+
+                </div>
+                <div class="col game-card fa fa-diamond" data-framework="diamond">
+
+                </div>
+                <div class="col game-card fa fa-bolt" data-framework="bolt">
+
+                </div>
+            </div>
+            <div class='row game-row'>
+                <div class="col game-card fa fa-paw" data-framework="paw">
+
+                </div>
+                <div class="col game-card fa fa-diamond" data-framework="diamond">
+
+                </div>
+                <div class="col game-card fa fa-bolt" data-framework="bolt">
+
+                </div>
+                <div class="col game-card fa fa-star" data-framework="star">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//-->
+
+    <!--Contact Page-->
+    <section class='container-fluid'>
+        <div class="row">
+            <div class="col form-section">
+
+                <h3 class='contact-heading'>Contact me!</h3>
+                <form id="myForm" onsubmit="return sendMail(this);">
+                    <div class="form-group">
+
+                        <input type="text" class="form-control text" id="usr" placeholder='Name' name='name' required>
                     </div>
-							<div class="form-group">
-								<textarea class="form-control text" rows="5" name='message' id="message" placeholder='Message' required></textarea>
-							</div>
-							<div class="form-group">
-								<button type="submit" class="btn btn-default submit-button">Submit</button>
-							</div>
-				</form>
-			</div>
-		</div>
-	</section>
-	<!--//-->
+                    <div class="form-group">
+                        <input type="email" class="form-control text" id="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control text" rows="5" name='message' id="message" placeholder='Message' required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default submit-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--//-->
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
-
-
-
-
-
-
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
-
-	<script src="assets/js/game.js"></script>
-	<script src="assets/js/sendEmail.js"></script>
+    <script src="assets/js/game.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>

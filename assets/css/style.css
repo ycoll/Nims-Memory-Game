@@ -1,182 +1,170 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 
 /*********************Landing Page*/
+
 body,
 html {
-
-    height: 100%;
+	height: 100%;
 }
 
-
-
 .name {
-    font-size: 60px;
-    color: black;
+	font-size: 60px;
+	color: black;
 }
 
 .p1 {
-    font-size: 35px;
-    color: black;
-    margin-left: 4%;
+	font-size: 35px;
+	color: black;
+	margin-left: 4%;
 }
 
 .name-container {
-    min-height: 100vh;
-    min-width: 100vw; 
-    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
+	min-height: 100vh;
+	min-width: 100vw;
+	background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
 }
+
 
 /*********************************Nav*/
 
 .nav-link {
-    text-align: right;
-
-
+	text-align: right;
 }
 
 .navbar-light .navbar-toggler {
-    background-color: #5d7db7;
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
-
+	background-color: #5d7db7;
+	transition: 0.5s;
+	transition-timing-function: ease-in-out;
 }
 
 .navbar-light .navbar-toggler:hover {
-    background-color: #5d7db7;
+	background-color: #5d7db7;
 }
-
 
 
 /********************************/
 
 .name-border {
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    right: 20%;
-
-    width: 60%;
-    
-    ;
-    
-
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	left: 20%;
+	right: 20%;
+	width: 60%;
+	;
 }
 
-.name{
-    font-family: 'Orbitron', sans-serif;
+.name {
+	font-family: 'Orbitron', sans-serif;
 }
 
 span.border {
-    border: none;
+	border: none;
 }
 
+
 /*******************************************************/
+
 
 /**********************************Game Page*/
 
 .game-section {
-    padding-right: 15%;
-    padding-left: 15%;
-    padding-bottom: 20%;
-    min-height: 40vh;
-    min-width: 100vw;
-   
-    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-bottom: 20%;
+	min-height: 40vh;
+	min-width: 100vw;
+	background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
 }
 
-.game-heading{
-    font-family: 'Orbitron', sans-serif;
-    padding-top: 10%;
-
+.game-heading {
+	font-family: 'Orbitron', sans-serif;
+	padding-top: 10%;
 }
 
-#Moves{
-     font-family: 'Orbitron', sans-serif;
-     font-size: 25px;
-}
-.game-rules{
-    font-size: 25px;
-
+#Moves {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 25px;
 }
 
-.score-row{
-    padding-bottom: 15px;
+.game-rules {
+	font-size: 25px;
 }
-.restart.fa-repeat{
-    font-size: 30px;
+
+.score-row {
+	padding-bottom: 15px;
+}
+
+.restart.fa-repeat {
+	font-size: 30px;
 }
 
 .game-container {
-    padding-top: 20%;
+	padding-top: 20%;
 }
 
-.fa.game-card{
-    font-size: 40px;
-    color: black;
-    margin: 1%;
-    text-align: center;
-    background-color: black;
-    border-radius: 25px;
-    padding: 5%;
+.fa.game-card {
+	font-size: 40px;
+	color: black;
+	margin: 1%;
+	text-align: center;
+	background-color: black;
+	border-radius: 25px;
+	padding: 5%;
 }
 
-.fa.game-card.flip{
-    transform: rotateY(180deg);
-    background-color: #5f7db7;
-    font-size: 40px;
-    transition: transform 0.8s;
+.fa.game-card.flip {
+	transform: rotateY(180deg);
+	background-color: #5f7db7;
+	font-size: 40px;
+	transition: transform 0.8s;
 }
 
-.fa.game-card.match{
-    font-size: 40px;
-    background-color: #018383;
+.fa.game-card.match {
+	font-size: 40px;
+	background-color: #018383;
 }
 
-.fa.game-card.unmatch{
-    font-size: 40px;
-    background-color: #c70d3a;
-    
+.fa.game-card.unmatch {
+	font-size: 40px;
+	background-color: #c70d3a;
 }
 
-.fa.game-card.disabled{
-    pointer-events: none;
+.fa.game-card.disabled {
+	pointer-events: none;
 }
+
+
 /*****************************************************************************/
+
 
 /***********************************Contact Page*/
 
 .form-section {
-    
-    text-align: center;
-    min-height: 60vh;
-    padding-top: 25%;
-    padding-right: 25%;
-    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
+	text-align: center;
+	min-height: 60vh;
+	padding-top: 25%;
+	padding-right: 25%;
+	background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
 }
-.col.form-section{
-    padding-left: 25%;
-}
-.contact-heading{
- font-family: 'Orbitron', sans-serif;
- padding-right: 30%;
-    
 
+.col.form-section {
+	padding-left: 25%;
+}
+
+.contact-heading {
+	font-family: 'Orbitron', sans-serif;
+	padding-right: 30%;
 }
 
 form {
-    padding: 5%;
-    width: 50vw;
-    
-   
+	padding: 5%;
+	width: 50vw;
 }
 
-.submit-button{
-    font-family: 'Orbitron', sans-serif;
-    
+.submit-button {
+	font-family: 'Orbitron', sans-serif;
 }
-
-
 
 
 /******************************************************************************/
