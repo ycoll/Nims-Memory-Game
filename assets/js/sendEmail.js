@@ -1,3 +1,5 @@
+//Learned from course module
+
 function sendMail(contactMe) {
     emailjs.send("gmail", "nims_memory_game", {
         "from_name": contactMe.name.value,
@@ -5,13 +7,12 @@ function sendMail(contactMe) {
         "message": contactMe.message.value
     })
         .then(
-            function (response) {
-                console.log("SUCCESS", response);
-            },
-            function (error) {
-                console.log("FAILED", error);
-            }
-            );
-   return false;
-
+          resetForm(),
+        );
+    return false;
+    
 }
+ function resetForm(){
+    let form = document.getElementById('myForm'); 
+    form.reset();
+ }
