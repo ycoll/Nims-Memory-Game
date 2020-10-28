@@ -1,6 +1,5 @@
 # Nims Memory Game
 
-This is my second Milestone project for the 'Interactive Frontend Development' module with the Code Institute.
 
 The main feature of this website is a simple, card matching memory game. There is also fully a functioning contact form. The game is designed to be both simple and enjoyable to play. It is inspired by a matching game I played as a child. 
  
